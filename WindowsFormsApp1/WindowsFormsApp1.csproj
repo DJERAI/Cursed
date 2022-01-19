@@ -46,12 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,9 +54,24 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="UC_Cars.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Cars.Designer.cs">
+      <DependentUpon>UC_Cars.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Drivers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Drivers.Designer.cs">
+      <DependentUpon>UC_Drivers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UС_MainMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UС_MainMenu.Designer.cs">
+      <DependentUpon>UС_MainMenu.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
@@ -75,6 +84,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UC_Cars.resx">
+      <DependentUpon>UC_Cars.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Drivers.resx">
+      <DependentUpon>UC_Drivers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UС_MainMenu.resx">
+      <DependentUpon>UС_MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
