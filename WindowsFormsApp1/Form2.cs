@@ -36,5 +36,10 @@ namespace WindowsFormsApp1
         {
             uС_MainMenu1.BringToFront();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            uCorder1.BringToFront();
+        }
     }
 }

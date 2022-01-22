@@ -1,6 +1,7 @@
-﻿namespace WindowsFormsApp1
+﻿
+namespace WindowsFormsApp1
 {
-    partial class UС_MainMenu
+    partial class UCorder
     {
         /// <summary> 
         /// Обязательная переменная конструктора.
@@ -30,12 +31,12 @@
         {
             this.SuspendLayout();
             // 
-            // UС_MainMenu
+            // UCorder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(10)))), ((int)(((byte)(46)))));
-            this.Name = "UС_MainMenu";
+            this.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.Name = "UCorder";
             this.Size = new System.Drawing.Size(950, 610);
             this.ResumeLayout(false);
 

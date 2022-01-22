@@ -54,6 +54,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UCorder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCorder.Designer.cs">
+      <DependentUpon>UCorder.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_Cars.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -84,6 +90,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UCorder.resx">
+      <DependentUpon>UCorder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC_Cars.resx">
       <DependentUpon>UC_Cars.cs</DependentUpon>
     </EmbeddedResource>
