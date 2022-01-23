@@ -38,10 +38,11 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.uCorder1 = new WindowsFormsApp1.UCorder();
             this.uС_MainMenu1 = new WindowsFormsApp1.UС_MainMenu();
             this.uC_Drivers1 = new WindowsFormsApp1.UC_Drivers();
             this.uC_Cars1 = new WindowsFormsApp1.UC_Cars();
-            this.uCorder1 = new WindowsFormsApp1.UCorder();
+            this.uC_disp1 = new WindowsFormsApp1.UC_disp();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -96,6 +97,7 @@
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -170,6 +172,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.uC_disp1);
             this.panel3.Controls.Add(this.uCorder1);
             this.panel3.Controls.Add(this.uС_MainMenu1);
             this.panel3.Controls.Add(this.uC_Drivers1);
@@ -179,6 +182,15 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(950, 610);
             this.panel3.TabIndex = 1;
+            // 
+            // uCorder1
+            // 
+            this.uCorder1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.uCorder1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uCorder1.Location = new System.Drawing.Point(0, 0);
+            this.uCorder1.Name = "uCorder1";
+            this.uCorder1.Size = new System.Drawing.Size(950, 610);
+            this.uCorder1.TabIndex = 3;
             // 
             // uС_MainMenu1
             // 
@@ -206,14 +218,12 @@
             this.uC_Cars1.Size = new System.Drawing.Size(950, 610);
             this.uC_Cars1.TabIndex = 0;
             // 
-            // uCorder1
+            // uC_disp1
             // 
-            this.uCorder1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.uCorder1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uCorder1.Location = new System.Drawing.Point(0, 0);
-            this.uCorder1.Name = "uCorder1";
-            this.uCorder1.Size = new System.Drawing.Size(950, 610);
-            this.uCorder1.TabIndex = 3;
+            this.uC_disp1.Location = new System.Drawing.Point(-1, 0);
+            this.uC_disp1.Name = "uC_disp1";
+            this.uC_disp1.Size = new System.Drawing.Size(951, 610);
+            this.uC_disp1.TabIndex = 6;
             // 
             // Form2
             // 
@@ -249,5 +259,6 @@
         private UC_Drivers uC_Drivers1;
         private UС_MainMenu uС_MainMenu1;
         private UCorder uCorder1;
+        private UC_disp uC_disp1;
     }
 }

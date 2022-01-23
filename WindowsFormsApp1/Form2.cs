@@ -41,5 +41,10 @@ namespace WindowsFormsApp1
         {
             uCorder1.BringToFront();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            uC_disp1.BringToFront();
+        }
     }
 }

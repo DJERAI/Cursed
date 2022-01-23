@@ -94,7 +94,7 @@
             this.toolStripLabel3.Font = new System.Drawing.Font("Chiller", 9.75F, System.Drawing.FontStyle.Italic);
             this.toolStripLabel3.ForeColor = System.Drawing.SystemColors.Control;
             this.toolStripLabel3.Name = "toolStripLabel3";
-            this.toolStripLabel3.Size = new System.Drawing.Size(109, 30);
+            this.toolStripLabel3.Size = new System.Drawing.Size(108, 30);
             this.toolStripLabel3.Text = "Введите номер";
             // 
             // toolStripSeparator3
@@ -131,7 +131,7 @@
             this.toolStripLabel1.Font = new System.Drawing.Font("Chiller", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripLabel1.ForeColor = System.Drawing.SystemColors.Control;
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(112, 30);
+            this.toolStripLabel1.Size = new System.Drawing.Size(111, 30);
             this.toolStripLabel1.Text = "Введите марку ";
             // 
             // toolStripSplitButton2
@@ -182,17 +182,18 @@
             this.toolStripLabel2.Font = new System.Drawing.Font("Chiller", 9.75F, System.Drawing.FontStyle.Italic);
             this.toolStripLabel2.ForeColor = System.Drawing.SystemColors.Control;
             this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(116, 30);
+            this.toolStripLabel2.Size = new System.Drawing.Size(115, 30);
             this.toolStripLabel2.Text = "Введите модель";
             // 
             // dataGridView1
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(10)))), ((int)(((byte)(46)))));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(10)))), ((int)(((byte)(46)))));
-            this.dataGridView1.Location = new System.Drawing.Point(0, 28);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(950, 582);
+            this.dataGridView1.Size = new System.Drawing.Size(950, 610);
             this.dataGridView1.TabIndex = 2;
             // 
             // UC_Cars
