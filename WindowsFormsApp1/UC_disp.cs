@@ -16,5 +16,17 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+        
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            uC_client1.Visible = radioButton1.Checked;
+            uC_dfd1.Visible = radioButton2.Checked;
+            
+        }
+
+        private void UC_disp_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

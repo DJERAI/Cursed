@@ -64,7 +64,7 @@
             // 
             this.toolStripTextBox4.BackColor = System.Drawing.Color.MediumOrchid;
             this.toolStripTextBox4.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.toolStripTextBox4.ForeColor = System.Drawing.Color.Purple;
+            this.toolStripTextBox4.ForeColor = System.Drawing.SystemColors.Control;
             this.toolStripTextBox4.Name = "toolStripTextBox4";
             this.toolStripTextBox4.Size = new System.Drawing.Size(100, 33);
             // 
@@ -86,15 +86,16 @@
             // 
             this.toolStripTextBox3.BackColor = System.Drawing.Color.MediumOrchid;
             this.toolStripTextBox3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.toolStripTextBox3.ForeColor = System.Drawing.SystemColors.Control;
             this.toolStripTextBox3.Name = "toolStripTextBox3";
             this.toolStripTextBox3.Size = new System.Drawing.Size(100, 33);
             // 
             // toolStripLabel3
             // 
-            this.toolStripLabel3.Font = new System.Drawing.Font("Chiller", 9.75F, System.Drawing.FontStyle.Italic);
+            this.toolStripLabel3.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Italic);
             this.toolStripLabel3.ForeColor = System.Drawing.SystemColors.Control;
             this.toolStripLabel3.Name = "toolStripLabel3";
-            this.toolStripLabel3.Size = new System.Drawing.Size(108, 30);
+            this.toolStripLabel3.Size = new System.Drawing.Size(103, 30);
             this.toolStripLabel3.Text = "Введите номер";
             // 
             // toolStripSeparator3
@@ -111,6 +112,7 @@
             // 
             this.toolStripTextBox2.BackColor = System.Drawing.Color.MediumOrchid;
             this.toolStripTextBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.toolStripTextBox2.ForeColor = System.Drawing.SystemColors.Control;
             this.toolStripTextBox2.Name = "toolStripTextBox2";
             this.toolStripTextBox2.Size = new System.Drawing.Size(100, 33);
             // 
@@ -123,15 +125,16 @@
             // 
             this.toolStripTextBox1.BackColor = System.Drawing.Color.MediumOrchid;
             this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.toolStripTextBox1.ForeColor = System.Drawing.SystemColors.Control;
             this.toolStripTextBox1.Name = "toolStripTextBox1";
             this.toolStripTextBox1.Size = new System.Drawing.Size(100, 33);
             // 
             // toolStripLabel1
             // 
-            this.toolStripLabel1.Font = new System.Drawing.Font("Chiller", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripLabel1.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Italic);
             this.toolStripLabel1.ForeColor = System.Drawing.SystemColors.Control;
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(111, 30);
+            this.toolStripLabel1.Size = new System.Drawing.Size(105, 30);
             this.toolStripLabel1.Text = "Введите марку ";
             // 
             // toolStripSplitButton2
@@ -179,10 +182,10 @@
             // 
             // toolStripLabel2
             // 
-            this.toolStripLabel2.Font = new System.Drawing.Font("Chiller", 9.75F, System.Drawing.FontStyle.Italic);
+            this.toolStripLabel2.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Italic);
             this.toolStripLabel2.ForeColor = System.Drawing.SystemColors.Control;
             this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(115, 30);
+            this.toolStripLabel2.Size = new System.Drawing.Size(111, 30);
             this.toolStripLabel2.Text = "Введите модель";
             // 
             // dataGridView1

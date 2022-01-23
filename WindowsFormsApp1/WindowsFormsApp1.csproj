@@ -66,6 +66,18 @@
     <Compile Include="UC_Cars.Designer.cs">
       <DependentUpon>UC_Cars.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_client.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_client.Designer.cs">
+      <DependentUpon>UC_client.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_dfd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_dfd.Designer.cs">
+      <DependentUpon>UC_dfd.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_disp.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -101,6 +113,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Cars.resx">
       <DependentUpon>UC_Cars.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_client.resx">
+      <DependentUpon>UC_client.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_dfd.resx">
+      <DependentUpon>UC_dfd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_disp.resx">
       <DependentUpon>UC_disp.cs</DependentUpon>
