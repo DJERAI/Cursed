@@ -30,24 +30,18 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.uС_MainMenu1 = new WindowsFormsApp1.UС_MainMenu();
-            this.uC_Drivers1 = new WindowsFormsApp1.UC_Drivers();
-            this.uC_Cars1 = new WindowsFormsApp1.UC_Cars();
-            this.uC_disp1 = new WindowsFormsApp1.UC_disp();
-            this.uCorder1 = new WindowsFormsApp1.UCorder();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,46 +59,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(187, 610);
             this.panel1.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(12)))), ((int)(((byte)(48)))));
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(187, 132);
-            this.panel2.TabIndex = 2;
-            this.panel2.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(12)))), ((int)(((byte)(48)))));
-            this.label1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label1.Font = new System.Drawing.Font("Algerian", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(60)))), ((int)(((byte)(199)))));
-            this.label1.Location = new System.Drawing.Point(0, 102);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(187, 30);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "taxi depot";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.uС_MainMenu1);
-            this.panel3.Controls.Add(this.uC_Drivers1);
-            this.panel3.Controls.Add(this.uC_Cars1);
-            this.panel3.Controls.Add(this.uC_disp1);
-            this.panel3.Controls.Add(this.uCorder1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(187, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(950, 610);
-            this.panel3.TabIndex = 1;
             // 
             // pictureBox2
             // 
@@ -126,7 +80,7 @@
             this.button4.Dock = System.Windows.Forms.DockStyle.Top;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button4.ForeColor = System.Drawing.Color.Purple;
+            this.button4.ForeColor = System.Drawing.SystemColors.Control;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.Location = new System.Drawing.Point(0, 354);
             this.button4.Name = "button4";
@@ -143,7 +97,7 @@
             this.button3.Dock = System.Windows.Forms.DockStyle.Top;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.ForeColor = System.Drawing.Color.Purple;
+            this.button3.ForeColor = System.Drawing.SystemColors.Control;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.Location = new System.Drawing.Point(0, 280);
             this.button3.Name = "button3";
@@ -160,7 +114,7 @@
             this.button2.Dock = System.Windows.Forms.DockStyle.Top;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.ForeColor = System.Drawing.Color.Purple;
+            this.button2.ForeColor = System.Drawing.SystemColors.Control;
             this.button2.Image = global::WindowsFormsApp1.Properties.Resources.icons8_руль_35;
             this.button2.Location = new System.Drawing.Point(0, 206);
             this.button2.Name = "button2";
@@ -177,7 +131,7 @@
             this.button1.Dock = System.Windows.Forms.DockStyle.Top;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.ForeColor = System.Drawing.Color.Purple;
+            this.button1.ForeColor = System.Drawing.SystemColors.Control;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.Location = new System.Drawing.Point(0, 132);
             this.button1.Name = "button1";
@@ -187,6 +141,18 @@
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(12)))), ((int)(((byte)(48)))));
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(187, 132);
+            this.panel2.TabIndex = 2;
+            this.panel2.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox1
             // 
@@ -200,48 +166,28 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // uС_MainMenu1
+            // label1
             // 
-            this.uС_MainMenu1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(10)))), ((int)(((byte)(46)))));
-            this.uС_MainMenu1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uС_MainMenu1.Location = new System.Drawing.Point(0, 0);
-            this.uС_MainMenu1.Name = "uС_MainMenu1";
-            this.uС_MainMenu1.Size = new System.Drawing.Size(950, 610);
-            this.uС_MainMenu1.TabIndex = 2;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(12)))), ((int)(((byte)(48)))));
+            this.label1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label1.Font = new System.Drawing.Font("Algerian", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(0, 102);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(187, 30);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "taxi depot";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // uC_Drivers1
+            // panel3
             // 
-            this.uC_Drivers1.BackColor = System.Drawing.SystemColors.Desktop;
-            this.uC_Drivers1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uC_Drivers1.Location = new System.Drawing.Point(0, 0);
-            this.uC_Drivers1.Name = "uC_Drivers1";
-            this.uC_Drivers1.Size = new System.Drawing.Size(950, 610);
-            this.uC_Drivers1.TabIndex = 1;
-            // 
-            // uC_Cars1
-            // 
-            this.uC_Cars1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uC_Cars1.Location = new System.Drawing.Point(0, 0);
-            this.uC_Cars1.Name = "uC_Cars1";
-            this.uC_Cars1.Size = new System.Drawing.Size(950, 610);
-            this.uC_Cars1.TabIndex = 0;
-            // 
-            // uC_disp1
-            // 
-            this.uC_disp1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(10)))), ((int)(((byte)(46)))));
-            this.uC_disp1.Location = new System.Drawing.Point(-1, 0);
-            this.uC_disp1.Name = "uC_disp1";
-            this.uC_disp1.Size = new System.Drawing.Size(951, 610);
-            this.uC_disp1.TabIndex = 6;
-            // 
-            // uCorder1
-            // 
-            this.uCorder1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(15)))), ((int)(((byte)(55)))));
-            this.uCorder1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uCorder1.Location = new System.Drawing.Point(0, 0);
-            this.uCorder1.Name = "uCorder1";
-            this.uCorder1.Size = new System.Drawing.Size(950, 610);
-            this.uCorder1.TabIndex = 3;
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(187, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(950, 610);
+            this.panel3.TabIndex = 1;
             // 
             // Form2
             // 
@@ -254,9 +200,8 @@
             this.Name = "Form2";
             this.Text = "Menu";
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
