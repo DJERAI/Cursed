@@ -24,27 +24,27 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            uC_Cars1.BringToFront();
+            uC_Cars2.BringToFront();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            uC_Drivers1.BringToFront();
+            uC_Drivers2.BringToFront();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            uС_MainMenu1.BringToFront();
+            uС_MainMenu2.BringToFront();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            uCorder1.BringToFront();
+            uCorder2.BringToFront();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            uC_disp1.BringToFront();
+            uC_disp2.BringToFront();
             
         }
     }

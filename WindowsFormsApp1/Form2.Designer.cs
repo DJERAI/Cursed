@@ -39,10 +39,16 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.uC_Drivers2 = new WindowsFormsApp1.UC_Drivers();
+            this.uCorder2 = new WindowsFormsApp1.UCorder();
+            this.uС_MainMenu2 = new WindowsFormsApp1.UС_MainMenu();
+            this.uC_Cars2 = new WindowsFormsApp1.UC_Cars();
+            this.uC_disp2 = new WindowsFormsApp1.UC_disp();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -183,11 +189,60 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.uC_disp2);
+            this.panel3.Controls.Add(this.uC_Cars2);
+            this.panel3.Controls.Add(this.uC_Drivers2);
+            this.panel3.Controls.Add(this.uCorder2);
+            this.panel3.Controls.Add(this.uС_MainMenu2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(187, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(950, 610);
             this.panel3.TabIndex = 1;
+            // 
+            // uC_Drivers2
+            // 
+            this.uC_Drivers2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(10)))), ((int)(((byte)(46)))));
+            this.uC_Drivers2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uC_Drivers2.Location = new System.Drawing.Point(0, 0);
+            this.uC_Drivers2.Name = "uC_Drivers2";
+            this.uC_Drivers2.Size = new System.Drawing.Size(950, 610);
+            this.uC_Drivers2.TabIndex = 5;
+            // 
+            // uCorder2
+            // 
+            this.uCorder2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(15)))), ((int)(((byte)(55)))));
+            this.uCorder2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uCorder2.Location = new System.Drawing.Point(0, 0);
+            this.uCorder2.Name = "uCorder2";
+            this.uCorder2.Size = new System.Drawing.Size(950, 610);
+            this.uCorder2.TabIndex = 6;
+            // 
+            // uС_MainMenu2
+            // 
+            this.uС_MainMenu2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(10)))), ((int)(((byte)(46)))));
+            this.uС_MainMenu2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uС_MainMenu2.Location = new System.Drawing.Point(0, 0);
+            this.uС_MainMenu2.Name = "uС_MainMenu2";
+            this.uС_MainMenu2.Size = new System.Drawing.Size(950, 610);
+            this.uС_MainMenu2.TabIndex = 7;
+            // 
+            // uC_Cars2
+            // 
+            this.uC_Cars2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uC_Cars2.Location = new System.Drawing.Point(0, 0);
+            this.uC_Cars2.Name = "uC_Cars2";
+            this.uC_Cars2.Size = new System.Drawing.Size(950, 610);
+            this.uC_Cars2.TabIndex = 2;
+            // 
+            // uC_disp2
+            // 
+            this.uC_disp2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(10)))), ((int)(((byte)(46)))));
+            this.uC_disp2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uC_disp2.Location = new System.Drawing.Point(0, 0);
+            this.uC_disp2.Name = "uC_disp2";
+            this.uC_disp2.Size = new System.Drawing.Size(950, 610);
+            this.uC_disp2.TabIndex = 8;
             // 
             // Form2
             // 
@@ -203,6 +258,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -224,5 +280,10 @@
         private UCorder uCorder1;
         private UC_disp uC_disp1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private UС_MainMenu uС_MainMenu2;
+        private UC_Cars uC_Cars2;
+        private UC_Drivers uC_Drivers2;
+        private UCorder uCorder2;
+        private UC_disp uC_disp2;
     }
 }
