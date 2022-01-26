@@ -75,7 +75,7 @@ namespace WindowsFormsApp1
             // открываем соединение
             conn.Open();
             // запрос удаления данных
-            string query = $"DELETE * FROM t_Cars WHERE idCar='{idCar}'";
+            string query = $"DELETE  FROM t_Cars WHERE idCar='{idCar}'";
             string query2 = $"DELETE FROM t_Marka WHERE (idMarka='{idMarka}')";
             string query3 = $"DELETE FROM t_Model WHERE (idModel='{idModel}')";
             string query4 = $"DELETE FROM t_Cars WHERE (NumberTS='{NumberTS}')";
@@ -110,7 +110,7 @@ namespace WindowsFormsApp1
         public void GetListCar()
         {
             //Запрос для вывода строк в БД
-            string commandStr = $"SELECT t_Cars.idCar, t_Marka.titleMarks, t_Model.titleModel, t_Cars.NumberTS FROM(t_Marka INNER JOIN t_Model ON t_Marka.idMarka = t_Model.idMarka) INNER JOIN t_Cars ON t_Model.idModel = t_Cars.idModel";
+            string commandStr = $"SELECT t_Cars.idCar, t_Marka.titleMarks, t_Model.titleModel, t_Cars.NumberTS FROM(t_Marka INNER JOIN t_Model ON t_Marka.idMarka = t_Model.idMarka) INNER JOIN t_Cars ON t_Model.idModel = t_Cars.idModel"; 
             //Открываем соединение
             conn.Open();
             //Объявляем команду, которая выполнить запрос в соединении conn
@@ -123,6 +123,7 @@ namespace WindowsFormsApp1
             dataGridView1.DataSource = bSource;
             //Закрываем соединение
             conn.Close();
+            
             
         }
 
@@ -160,6 +161,7 @@ namespace WindowsFormsApp1
             dataGridView1.RowHeadersVisible = false;
             //Показываем заголовки столбцов
             dataGridView1.ColumnHeadersVisible = false;
+           
         }
 
         private void toolStripButton2_Click(object sender, EventArgs e)
@@ -247,15 +249,14 @@ namespace WindowsFormsApp1
             string Model = toolStripTextBox2.Text;
             string Number = toolStripTextBox3.Text;
             //Если метод вставки записи в БД вернёт истину, то просто обновим список и увидим вставленное значение
-            if (InsertCars(Marka, Model, Number))
-            {
-                GetListCar();
-            }
+            InsertCars( Marka,  Model,  Number);
+            table.Clear();
+            GetListCar();
+            
+            
             //Иначе произошла какая то ошибка и покажем пользователю уведомление
-            else
-            {
-                MessageBox.Show("Произошла ошибка.", "Ошибка");
-            }
+            
+            
         }
     }
 }
