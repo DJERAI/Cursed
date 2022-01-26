@@ -47,5 +47,10 @@ namespace WindowsFormsApp1
             uC_disp2.BringToFront();
             
         }
+
+        private void uC_Cars2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

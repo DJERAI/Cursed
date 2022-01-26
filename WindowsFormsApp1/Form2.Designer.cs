@@ -39,10 +39,10 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.uC_Cars2 = new WindowsFormsApp1.UC_Cars();
             this.uC_Drivers2 = new WindowsFormsApp1.UC_Drivers();
             this.uCorder2 = new WindowsFormsApp1.UCorder();
             this.uС_MainMenu2 = new WindowsFormsApp1.UС_MainMenu();
-            this.uC_Cars2 = new WindowsFormsApp1.UC_Cars();
             this.uC_disp2 = new WindowsFormsApp1.UC_disp();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -189,16 +189,25 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.uС_MainMenu2);
             this.panel3.Controls.Add(this.uC_disp2);
             this.panel3.Controls.Add(this.uC_Cars2);
             this.panel3.Controls.Add(this.uC_Drivers2);
             this.panel3.Controls.Add(this.uCorder2);
-            this.panel3.Controls.Add(this.uС_MainMenu2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(187, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(950, 610);
             this.panel3.TabIndex = 1;
+            // 
+            // uC_Cars2
+            // 
+            this.uC_Cars2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uC_Cars2.Location = new System.Drawing.Point(0, 0);
+            this.uC_Cars2.Name = "uC_Cars2";
+            this.uC_Cars2.Size = new System.Drawing.Size(950, 610);
+            this.uC_Cars2.TabIndex = 2;
+            this.uC_Cars2.Load += new System.EventHandler(this.uC_Cars2_Load);
             // 
             // uC_Drivers2
             // 
@@ -226,14 +235,6 @@
             this.uС_MainMenu2.Name = "uС_MainMenu2";
             this.uС_MainMenu2.Size = new System.Drawing.Size(950, 610);
             this.uС_MainMenu2.TabIndex = 7;
-            // 
-            // uC_Cars2
-            // 
-            this.uC_Cars2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uC_Cars2.Location = new System.Drawing.Point(0, 0);
-            this.uC_Cars2.Name = "uC_Cars2";
-            this.uC_Cars2.Size = new System.Drawing.Size(950, 610);
-            this.uC_Cars2.TabIndex = 2;
             // 
             // uC_disp2
             // 
