@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class Form2 : Form
+    public partial class Menu : Form
     {
-        public Form2()
+        public Menu()
         {
             InitializeComponent();
         }
@@ -48,9 +48,6 @@ namespace WindowsFormsApp1
             
         }
 
-        private void uC_Cars2_Load(object sender, EventArgs e)
-        {
-
-        }
+      
     }
 }

@@ -46,6 +46,10 @@
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -96,8 +100,8 @@
             this.toolStripLabel3.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Italic);
             this.toolStripLabel3.ForeColor = System.Drawing.SystemColors.Control;
             this.toolStripLabel3.Name = "toolStripLabel3";
-            this.toolStripLabel3.Size = new System.Drawing.Size(103, 30);
-            this.toolStripLabel3.Text = "Введите номер";
+            this.toolStripLabel3.Size = new System.Drawing.Size(74, 30);
+            this.toolStripLabel3.Text = "Рег.Номер";
             // 
             // toolStripSeparator3
             // 
@@ -135,8 +139,8 @@
             this.toolStripLabel1.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Italic);
             this.toolStripLabel1.ForeColor = System.Drawing.SystemColors.Control;
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(105, 30);
-            this.toolStripLabel1.Text = "Введите марку ";
+            this.toolStripLabel1.Size = new System.Drawing.Size(51, 30);
+            this.toolStripLabel1.Text = "Марка ";
             // 
             // toolStripButton1
             // 
@@ -153,6 +157,7 @@
             this.toolStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(15)))), ((int)(((byte)(55)))));
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton1,
+            this.toolStripSeparator4,
             this.toolStripButton3,
             this.toolStripLabel1,
             this.toolStripTextBox1,
@@ -166,7 +171,10 @@
             this.toolStripSplitButton1,
             this.toolStripTextBox4,
             this.toolStripSeparator1,
-            this.toolStripButton2});
+            this.toolStripButton2,
+            this.toolStripSeparator6,
+            this.toolStripLabel4,
+            this.toolStripComboBox1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(950, 33);
@@ -187,19 +195,43 @@
             this.toolStripLabel2.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Italic);
             this.toolStripLabel2.ForeColor = System.Drawing.SystemColors.Control;
             this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(111, 30);
-            this.toolStripLabel2.Text = "Введите модель";
+            this.toolStripLabel2.Size = new System.Drawing.Size(57, 30);
+            this.toolStripLabel2.Text = "Модель";
             // 
             // dataGridView1
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(10)))), ((int)(((byte)(46)))));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(10)))), ((int)(((byte)(46)))));
-            this.dataGridView1.Location = new System.Drawing.Point(0, 29);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 27);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(950, 581);
+            this.dataGridView1.Size = new System.Drawing.Size(950, 583);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDown);
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 33);
+            // 
+            // toolStripSeparator6
+            // 
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 33);
+            // 
+            // toolStripLabel4
+            // 
+            this.toolStripLabel4.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Italic);
+            this.toolStripLabel4.ForeColor = System.Drawing.SystemColors.Control;
+            this.toolStripLabel4.Name = "toolStripLabel4";
+            this.toolStripLabel4.Size = new System.Drawing.Size(39, 30);
+            this.toolStripLabel4.Text = "Цвет";
+            // 
+            // toolStripComboBox1
+            // 
+            this.toolStripComboBox1.Name = "toolStripComboBox1";
+            this.toolStripComboBox1.Size = new System.Drawing.Size(121, 33);
+            this.toolStripComboBox1.Click += new System.EventHandler(this.toolStripComboBox1_Click_1);
             // 
             // UC_Cars
             // 
@@ -237,5 +269,9 @@
         private System.Windows.Forms.ToolStripLabel toolStripLabel2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel4;
+        private System.Windows.Forms.ToolStripComboBox toolStripComboBox1;
     }
 }

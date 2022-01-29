@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
+
 namespace WindowsFormsApp1
 {
     public partial class UC_Cars : UserControl
@@ -32,6 +33,8 @@ namespace WindowsFormsApp1
         string idMarka;
         string idModel;
         string NumberTS;
+        string id_rows5;
+        
         public UC_Cars()
         {
             InitializeComponent();
@@ -110,7 +113,7 @@ namespace WindowsFormsApp1
         public void GetListCar()
         {
             //Запрос для вывода строк в БД
-            string commandStr = $"SELECT t_Cars.idCar, t_Marka.titleMarks, t_Model.titleModel, t_Cars.NumberTS FROM(t_Marka INNER JOIN t_Model ON t_Marka.idMarka = t_Model.idMarka) INNER JOIN t_Cars ON t_Model.idModel = t_Cars.idModel"; 
+            string commandStr = $"SELECT t_Cars.NumberTS AS 'Номер автомобиля', t_Marka.titleMarks AS 'Марка автомобиля', t_Model.titleModel AS 'Модель автомобиля' FROM (t_Marka INNER JOIN t_Model ON t_Marka.idMarka = t_Model.idMarka) INNER JOIN t_Cars ON t_Model.idModel = t_Cars.idModel;"; 
             //Открываем соединение
             conn.Open();
             //Объявляем команду, которая выполнить запрос в соединении conn
@@ -136,32 +139,30 @@ namespace WindowsFormsApp1
             dataGridView1.Columns[0].Visible = true;
             dataGridView1.Columns[1].Visible = true;
             dataGridView1.Columns[2].Visible = true;
-            dataGridView1.Columns[3].Visible = true;
-            
+
 
             //Ширина полей
-            dataGridView1.Columns[0].FillWeight = 15;
-            dataGridView1.Columns[1].FillWeight = 40;
-            dataGridView1.Columns[2].FillWeight = 15;
-            dataGridView1.Columns[3].FillWeight = 15;
-           
+            dataGridView1.Columns[0].FillWeight = 150;
+            dataGridView1.Columns[1].FillWeight = 150;
+            dataGridView1.Columns[2].FillWeight = 150;
+
             //Режим для полей "Только для чтения"
             dataGridView1.Columns[0].ReadOnly = true;
             dataGridView1.Columns[1].ReadOnly = true;
             dataGridView1.Columns[2].ReadOnly = true;
-            dataGridView1.Columns[3].ReadOnly = true;
-            
+
             //Растягивание полей грида
             dataGridView1.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dataGridView1.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dataGridView1.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            
+
             //Убираем заголовки строк
-            dataGridView1.RowHeadersVisible = false;
+            dataGridView1.RowHeadersVisible = true;
             //Показываем заголовки столбцов
-            dataGridView1.ColumnHeadersVisible = false;
-           
+            dataGridView1.ColumnHeadersVisible = true;
+            GetComboBox1();
+
+
         }
 
         private void toolStripButton2_Click(object sender, EventArgs e)
@@ -174,6 +175,7 @@ namespace WindowsFormsApp1
             dataGridView1.Rows.RemoveAt(Convert.ToInt32(index_rows5));
             DeleteCar(idCar,idMarka,idModel,NumberTS);
         }
+
         private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             if (!e.RowIndex.Equals(-1) && !e.ColumnIndex.Equals(-1) && e.Button.Equals(MouseButtons.Left))
@@ -183,7 +185,7 @@ namespace WindowsFormsApp1
                 dataGridView1.CurrentRow.Selected = true;
 
                 index_rows5 = dataGridView1.SelectedCells[0].RowIndex.ToString();
-
+                                
                 idCar = dataGridView1.Rows[Convert.ToInt32(index_rows5)].Cells[0].Value.ToString();
 
                 idMarka = dataGridView1.Rows[Convert.ToInt32(index_rows5)].Cells[1].Value.ToString();
@@ -209,16 +211,19 @@ namespace WindowsFormsApp1
             string query = $"INSERT INTO t_Marka (titleMarks) VALUES ('{Marka}')";
             string query1 = $"INSERT INTO t_Model (titleModel) VALUES ('{Model}')";
             string query2 = $"INSERT INTO t_Cars (NumberTS) VALUES ('{Number}')";
+            
             try
             {
                 // объект для выполнения SQL-запроса
                 MySqlCommand command = new MySqlCommand(query, conn);
                 MySqlCommand command1 = new MySqlCommand(query1, conn);
                 MySqlCommand command2 = new MySqlCommand(query2, conn);
+             
                 // выполняем запрос
                 InsertCount = command.ExecuteNonQuery();
                 InsertCount = command1.ExecuteNonQuery();
                 InsertCount = command2.ExecuteNonQuery();
+               
                 // закрываем подключение к БД
             }
             catch
@@ -248,15 +253,61 @@ namespace WindowsFormsApp1
             string Marka = toolStripTextBox1.Text;
             string Model = toolStripTextBox2.Text;
             string Number = toolStripTextBox3.Text;
+            
             //Если метод вставки записи в БД вернёт истину, то просто обновим список и увидим вставленное значение
             InsertCars( Marka,  Model,  Number);
-            table.Clear();
-            GetListCar();
-            
+            reload_list();
             
             //Иначе произошла какая то ошибка и покажем пользователю уведомление
             
             
+        }
+        public void GetComboBox1()
+        {
+            //Формирование списка статусов
+            DataTable list_color_table = new DataTable();
+            MySqlCommand list_color_command = new MySqlCommand();
+            //Открываем соединение
+            conn.Open();
+            //Формируем столбцы для комбобокса списка ЦП
+            list_color_table.Columns.Add(new DataColumn("idСolor", System.Type.GetType("System.Int32")));
+            list_color_table.Columns.Add(new DataColumn("Сolor", System.Type.GetType("System.String")));
+            //Настройка видимости полей комбобокса
+            //toolStripComboBox1.DataSource = list_color_table;
+            //toolStripComboBox1.DisplayMember = "Color";
+            //toolStripComboBox1.ValueMember = "idColor";
+            //Формируем строку запроса на отображение списка статусов прав пользователя
+            string sql_list_color = "SELECT Color FROM t_Color";
+            list_color_command.CommandText = sql_list_color;
+            list_color_command.Connection = conn;
+            //Формирование списка ЦП для combobox'a
+            MySqlDataReader list_color_reader;
+            try
+            {
+                //Инициализируем ридер
+                list_color_reader = list_color_command.ExecuteReader();
+                while (list_color_reader.Read())
+                {
+                    DataRow rowToAdd = list_color_table.NewRow();
+                    rowToAdd["Color"] = list_color_reader[0].ToString();
+                    list_color_table.Rows.Add(rowToAdd);
+                }
+                list_color_reader.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ошибка чтения списка ЦП \n\n" + ex, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Application.Exit();
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        private void toolStripComboBox1_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

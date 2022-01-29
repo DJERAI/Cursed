@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class Form2
+    partial class Menu
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button4 = new System.Windows.Forms.Button();
@@ -39,11 +39,11 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.uС_MainMenu2 = new WindowsFormsApp1.UС_MainMenu();
+            this.uC_disp2 = new WindowsFormsApp1.UC_disp();
             this.uC_Cars2 = new WindowsFormsApp1.UC_Cars();
             this.uC_Drivers2 = new WindowsFormsApp1.UC_Drivers();
             this.uCorder2 = new WindowsFormsApp1.UCorder();
-            this.uС_MainMenu2 = new WindowsFormsApp1.UС_MainMenu();
-            this.uC_disp2 = new WindowsFormsApp1.UC_disp();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
@@ -200,6 +200,24 @@
             this.panel3.Size = new System.Drawing.Size(950, 610);
             this.panel3.TabIndex = 1;
             // 
+            // uС_MainMenu2
+            // 
+            this.uС_MainMenu2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(10)))), ((int)(((byte)(46)))));
+            this.uС_MainMenu2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uС_MainMenu2.Location = new System.Drawing.Point(0, 0);
+            this.uС_MainMenu2.Name = "uС_MainMenu2";
+            this.uС_MainMenu2.Size = new System.Drawing.Size(950, 610);
+            this.uС_MainMenu2.TabIndex = 7;
+            // 
+            // uC_disp2
+            // 
+            this.uC_disp2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(10)))), ((int)(((byte)(46)))));
+            this.uC_disp2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uC_disp2.Location = new System.Drawing.Point(0, 0);
+            this.uC_disp2.Name = "uC_disp2";
+            this.uC_disp2.Size = new System.Drawing.Size(950, 610);
+            this.uC_disp2.TabIndex = 8;
+            // 
             // uC_Cars2
             // 
             this.uC_Cars2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -207,7 +225,6 @@
             this.uC_Cars2.Name = "uC_Cars2";
             this.uC_Cars2.Size = new System.Drawing.Size(950, 610);
             this.uC_Cars2.TabIndex = 2;
-            this.uC_Cars2.Load += new System.EventHandler(this.uC_Cars2_Load);
             // 
             // uC_Drivers2
             // 
@@ -226,24 +243,6 @@
             this.uCorder2.Name = "uCorder2";
             this.uCorder2.Size = new System.Drawing.Size(950, 610);
             this.uCorder2.TabIndex = 6;
-            // 
-            // uС_MainMenu2
-            // 
-            this.uС_MainMenu2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(10)))), ((int)(((byte)(46)))));
-            this.uС_MainMenu2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uС_MainMenu2.Location = new System.Drawing.Point(0, 0);
-            this.uС_MainMenu2.Name = "uС_MainMenu2";
-            this.uС_MainMenu2.Size = new System.Drawing.Size(950, 610);
-            this.uС_MainMenu2.TabIndex = 7;
-            // 
-            // uC_disp2
-            // 
-            this.uC_disp2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(10)))), ((int)(((byte)(46)))));
-            this.uC_disp2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uC_disp2.Location = new System.Drawing.Point(0, 0);
-            this.uC_disp2.Name = "uC_disp2";
-            this.uC_disp2.Size = new System.Drawing.Size(950, 610);
-            this.uC_disp2.TabIndex = 8;
             // 
             // Form2
             // 
