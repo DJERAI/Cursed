@@ -160,7 +160,7 @@ namespace WindowsFormsApp1
             dataGridView1.RowHeadersVisible = true;
             //Показываем заголовки столбцов
             dataGridView1.ColumnHeadersVisible = true;
-            GetComboBox1();
+          
 
 
         }
@@ -307,7 +307,7 @@ namespace WindowsFormsApp1
 
         private void toolStripComboBox1_Click_1(object sender, EventArgs e)
         {
-
+            GetComboBox1();
         }
     }
 }
