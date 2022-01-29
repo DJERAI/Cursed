@@ -198,7 +198,7 @@ namespace WindowsFormsApp1
 
             }
         }
-        public bool InsertCars(string Marka, string Model, string Number)
+        public bool InsertCars(string Marka, string Model, string Number, string Col)
         {
             //определяем переменную, хранящую количество вставленных строк
             int InsertCount = 0;
@@ -211,6 +211,7 @@ namespace WindowsFormsApp1
             string query = $"INSERT INTO t_Marka (titleMarks) VALUES ('{Marka}')";
             string query1 = $"INSERT INTO t_Model (titleModel) VALUES ('{Model}')";
             string query2 = $"INSERT INTO t_Cars (NumberTS) VALUES ('{Number}')";
+            string query3 = $"INSERT INTO t_Color (Color) VALUES ('{Col}')";
             
             try
             {
@@ -218,12 +219,14 @@ namespace WindowsFormsApp1
                 MySqlCommand command = new MySqlCommand(query, conn);
                 MySqlCommand command1 = new MySqlCommand(query1, conn);
                 MySqlCommand command2 = new MySqlCommand(query2, conn);
-             
+                MySqlCommand command3 = new MySqlCommand(query3, conn);
+
                 // выполняем запрос
                 InsertCount = command.ExecuteNonQuery();
                 InsertCount = command1.ExecuteNonQuery();
                 InsertCount = command2.ExecuteNonQuery();
-               
+                InsertCount = command3.ExecuteNonQuery();
+
                 // закрываем подключение к БД
             }
             catch
@@ -253,61 +256,16 @@ namespace WindowsFormsApp1
             string Marka = toolStripTextBox1.Text;
             string Model = toolStripTextBox2.Text;
             string Number = toolStripTextBox3.Text;
+            string Col = toolStripTextBox4.Text;
             
             //Если метод вставки записи в БД вернёт истину, то просто обновим список и увидим вставленное значение
-            InsertCars( Marka,  Model,  Number);
+            InsertCars( Marka,  Model,  Number, Col);
             reload_list();
             
             //Иначе произошла какая то ошибка и покажем пользователю уведомление
             
             
         }
-        public void GetComboBox1()
-        {
-            //Формирование списка статусов
-            DataTable list_color_table = new DataTable();
-            MySqlCommand list_color_command = new MySqlCommand();
-            //Открываем соединение
-            conn.Open();
-            //Формируем столбцы для комбобокса списка ЦП
-            list_color_table.Columns.Add(new DataColumn("idСolor", System.Type.GetType("System.Int32")));
-            list_color_table.Columns.Add(new DataColumn("Сolor", System.Type.GetType("System.String")));
-            //Настройка видимости полей комбобокса
-            //toolStripComboBox1.DataSource = list_color_table;
-            //toolStripComboBox1.DisplayMember = "Color";
-            //toolStripComboBox1.ValueMember = "idColor";
-            //Формируем строку запроса на отображение списка статусов прав пользователя
-            string sql_list_color = "SELECT Color FROM t_Color";
-            list_color_command.CommandText = sql_list_color;
-            list_color_command.Connection = conn;
-            //Формирование списка ЦП для combobox'a
-            MySqlDataReader list_color_reader;
-            try
-            {
-                //Инициализируем ридер
-                list_color_reader = list_color_command.ExecuteReader();
-                while (list_color_reader.Read())
-                {
-                    DataRow rowToAdd = list_color_table.NewRow();
-                    rowToAdd["Color"] = list_color_reader[0].ToString();
-                    list_color_table.Rows.Add(rowToAdd);
-                }
-                list_color_reader.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Ошибка чтения списка ЦП \n\n" + ex, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Application.Exit();
-            }
-            finally
-            {
-                conn.Close();
-            }
-        }
-
-        private void toolStripComboBox1_Click_1(object sender, EventArgs e)
-        {
-            GetComboBox1();
-        }
+       
     }
 }
