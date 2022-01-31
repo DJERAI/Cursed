@@ -44,9 +44,9 @@
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripTextBox4 = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.label1 = new System.Windows.Forms.Label();
@@ -78,6 +78,7 @@
             // toolStripTextBox3
             // 
             this.toolStripTextBox3.BackColor = System.Drawing.Color.MediumOrchid;
+            this.toolStripTextBox3.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripTextBox3.ForeColor = System.Drawing.SystemColors.Control;
             this.toolStripTextBox3.Name = "toolStripTextBox3";
             this.toolStripTextBox3.Size = new System.Drawing.Size(100, 33);
@@ -98,6 +99,7 @@
             // toolStripTextBox2
             // 
             this.toolStripTextBox2.BackColor = System.Drawing.Color.MediumOrchid;
+            this.toolStripTextBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripTextBox2.ForeColor = System.Drawing.SystemColors.Control;
             this.toolStripTextBox2.Name = "toolStripTextBox2";
             this.toolStripTextBox2.Size = new System.Drawing.Size(100, 33);
@@ -110,6 +112,7 @@
             // toolStripTextBox1
             // 
             this.toolStripTextBox1.BackColor = System.Drawing.Color.MediumOrchid;
+            this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripTextBox1.ForeColor = System.Drawing.SystemColors.Control;
             this.toolStripTextBox1.Name = "toolStripTextBox1";
             this.toolStripTextBox1.Size = new System.Drawing.Size(100, 33);
@@ -154,7 +157,7 @@
             this.toolStripButton2});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(950, 33);
+            this.toolStrip1.Size = new System.Drawing.Size(948, 33);
             this.toolStrip1.TabIndex = 3;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -180,11 +183,6 @@
             this.toolStripLabel2.Size = new System.Drawing.Size(57, 30);
             this.toolStripLabel2.Text = "Модель";
             // 
-            // toolStripSeparator6
-            // 
-            this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 33);
-            // 
             // toolStripLabel4
             // 
             this.toolStripLabel4.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Italic);
@@ -196,9 +194,15 @@
             // toolStripTextBox4
             // 
             this.toolStripTextBox4.BackColor = System.Drawing.Color.MediumOrchid;
+            this.toolStripTextBox4.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripTextBox4.ForeColor = System.Drawing.SystemColors.Control;
             this.toolStripTextBox4.Name = "toolStripTextBox4";
             this.toolStripTextBox4.Size = new System.Drawing.Size(100, 33);
+            // 
+            // toolStripSeparator6
+            // 
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 33);
             // 
             // dataGridView1
             // 
@@ -284,7 +288,7 @@
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "UC_Cars";
-            this.Size = new System.Drawing.Size(950, 610);
+            this.Size = new System.Drawing.Size(948, 610);
             this.Load += new System.EventHandler(this.UC_Cars_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();

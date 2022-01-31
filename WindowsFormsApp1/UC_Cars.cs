@@ -160,8 +160,8 @@ namespace WindowsFormsApp1
             dataGridView1.RowHeadersVisible = true;
             //Показываем заголовки столбцов
             dataGridView1.ColumnHeadersVisible = true;
-          
 
+            GetComboBox1();
 
         }
 
@@ -359,6 +359,8 @@ namespace WindowsFormsApp1
             GetComboBox2(comboBox1.SelectedValue.ToString());
             //Установка пустой строки по умолчанию в ComboBox2
             comboBox2.Text = "";
+
+            GetComboBox2(comboBox1.SelectedValue.ToString());
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
