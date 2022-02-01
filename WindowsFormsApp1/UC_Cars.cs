@@ -160,8 +160,10 @@ namespace WindowsFormsApp1
             dataGridView1.RowHeadersVisible = true;
             //Показываем заголовки столбцов
             dataGridView1.ColumnHeadersVisible = true;
+            dataGridView1.AllowUserToAddRows = false;
 
             GetComboBox1();
+            GetComboBox3();
 
         }
 
@@ -194,7 +196,7 @@ namespace WindowsFormsApp1
 
                 NumberTS = dataGridView1.Rows[Convert.ToInt32(index_rows5)].Cells[3].Value.ToString();
 
-                //MessageBox.Show($"{idCar},{idMarka},{idModel},{NumberTS}");
+               GetSelectedIDString();
 
             }
         }
@@ -280,7 +282,7 @@ namespace WindowsFormsApp1
             comboBox1.DisplayMember = "titleMarks";
             comboBox1.ValueMember = "idMarka";
             //Формируем строку запроса на отображение списка статусов прав пользователя
-            string sql_list_model = "SELECT idMarka, titleMarks FROM t_Marka";
+            string sql_list_model = "SELECT idMarka, titleMarks FROM t_Marka;SELECT NumberTS FROM t_Cars";
             list_marka_command.CommandText = sql_list_model;
             list_marka_command.Connection = conn;
             //Формирование списка ЦП для combobox'a
@@ -351,6 +353,49 @@ namespace WindowsFormsApp1
                 conn.Close();
             }
         }
+        public void GetComboBox3()
+        {
+            //Формирование списка статусов
+            DataTable list_marka_table = new DataTable();
+            MySqlCommand list_marka_command = new MySqlCommand();
+            //Открываем соединение
+            conn.Open();
+            //Формируем столбцы для комбобокса списка ЦП
+            list_marka_table.Columns.Add(new DataColumn("idColor", System.Type.GetType("System.Int32")));
+            list_marka_table.Columns.Add(new DataColumn("Color", System.Type.GetType("System.String")));
+            //Настройка видимости полей комбобокса
+            comboBox3.DataSource = list_marka_table;
+            comboBox3.DisplayMember = "Color";
+            comboBox3.ValueMember = "idColor";
+            //Формируем строку запроса на отображение списка статусов прав пользователя
+            string sql_list_model = "SELECT idColor, Color FROM t_Color";
+            list_marka_command.CommandText = sql_list_model;
+            list_marka_command.Connection = conn;
+            //Формирование списка ЦП для combobox'a
+            MySqlDataReader list_model_reader;
+            try
+            {
+                //Инициализируем ридер
+                list_model_reader = list_marka_command.ExecuteReader();
+                while (list_model_reader.Read())
+                {
+                    DataRow rowToAdd = list_marka_table.NewRow();
+                    rowToAdd["idColor"] = Convert.ToInt32(list_model_reader[0]);
+                    rowToAdd["Color"] = list_model_reader[1].ToString();
+                    list_marka_table.Rows.Add(rowToAdd);
+                }
+                list_model_reader.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ошибка чтения списка ЦП \n\n" + ex, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Application.Exit();
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -360,7 +405,7 @@ namespace WindowsFormsApp1
             //Установка пустой строки по умолчанию в ComboBox2
             comboBox2.Text = "";
 
-            GetComboBox2(comboBox1.SelectedValue.ToString());
+            
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
@@ -373,7 +418,7 @@ namespace WindowsFormsApp1
             dataGridView1.Columns[0].Visible = true;
             dataGridView1.Columns[1].Visible = true;
             dataGridView1.Columns[2].Visible = true;
-            dataGridView1.Columns[3].Visible = false;
+            
             //Ширина полей
             dataGridView1.Columns[0].FillWeight = 10;
             dataGridView1.Columns[1].FillWeight = 70;
@@ -387,7 +432,7 @@ namespace WindowsFormsApp1
             dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dataGridView1.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             //Убираем заголовки строк
-            dataGridView1.RowHeadersVisible = false;
+            dataGridView1.RowHeadersVisible = true;
             //Показываем заголовки столбцов
             dataGridView1.ColumnHeadersVisible = true;
         }
