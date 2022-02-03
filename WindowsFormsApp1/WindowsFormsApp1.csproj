@@ -165,5 +165,11 @@
   <ItemGroup>
     <None Include="Resources\icons8-повторение-40.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-добавить-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-корзина-64.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

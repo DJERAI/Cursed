@@ -352,6 +352,7 @@ namespace WindowsFormsApp1
             {
                 conn.Close();
             }
+            reload_list();
         }
         public void GetComboBox3()
         {
